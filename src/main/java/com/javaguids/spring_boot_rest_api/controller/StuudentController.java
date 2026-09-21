@@ -66,4 +66,10 @@ public class StuudentController {
         System.out.println(students.getLastname());
         return students;
     }
-}
+    //Spring boot REST API that Handles HTTP Delete Request-deleting existing resource
+    @DeleteMapping("students/{id}/delete")
+    public String deleteStudent(@PathVariable("id") int studentId){
+        System.out.println(studentId);
+        return "student delete successfully!";
+    }
+    }
